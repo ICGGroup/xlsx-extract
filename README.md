@@ -1,4 +1,4 @@
-# xlsx-extract 
+# xlsx-extract-js 
 
 -- extracts data from XLSX files with low memory footprint
 
@@ -9,15 +9,21 @@ xlsx-files can get pretty large, so nodejs & full featured xlsx-modules often re
 
 hence these magnificent features:
 
-- filestreams are piped & xml is parsed with sax parser `node-expat`
+- filestreams are piped & xml is parsed with sax parser
 - get rows/cells each by callback or write them to a .tsv or .json file
 - empty lines at the end of the file are ignored
 
-#Convenience API
+## Install
+
+```
+npm install xlsx-extract-js --save
+```
+
+## Convenience API
 
 ```javascript
 
-	var XLSX = require('xlsx-extract').XLSX;
+	var XLSX = require('xlsx-extract-js').XLSX;
 
 	//dump by row
 	new XLSX().extract('path/to/file.xlsx', {sheet_nr:1})
@@ -87,7 +93,7 @@ hence these magnificent features:
 
 ```
 
-#TODO
+## TODO
 
 - better error handling
 - more testing
